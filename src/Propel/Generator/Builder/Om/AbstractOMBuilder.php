@@ -1060,6 +1060,8 @@ abstract class AbstractOMBuilder extends DataModelBuilder
             $content = $content."\n";
         }
 
+        $content = preg_replace('/[[:blank:]]+$/m', '', $content);
+
         return $content;
     }
 
